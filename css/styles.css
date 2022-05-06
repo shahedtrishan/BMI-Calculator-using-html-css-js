@@ -21,7 +21,7 @@
 
 .navbar ul li {
     display: inline-block;
-    margin: 0 15px;
+    margin: 0 35px;
     list-style: none;
 }
 
@@ -55,7 +55,7 @@
 
 .left-content h1 {
     color: #019267;
-    font-size: 40px;
+    font-size: 45px;
 }
 
 .arrow {
@@ -64,6 +64,9 @@
     -webkit-animation: vibrate-1 0.4s linear 15 alternate-reverse;
     animation: vibrate-1 0.4s linear 15 alternate-reverse;
 }
+
+
+/* arrow animation */
 
 @keyframes vibrate-1 {
     0% {
@@ -90,4 +93,115 @@
         -webkit-transform: translate(0);
         transform: translate(0);
     }
+}
+
+.icon {
+    width: 60px;
+    cursor: pointer;
+}
+
+.right-content {
+    position: absolute;
+    width: 330px;
+    height: 400px;
+    right: 90px;
+    background-color: #131b19;
+    text-align: center;
+    border-radius: 28px;
+}
+
+input[type=number]::-webkit-inner-spin-#,
+input[type=number]::-webkit-outer-spin-button {
+    opacity: 1;
+}
+
+.right-content h1 {
+    font-weight: bold;
+    font-size: 36px;
+    padding: 20px 0;
+    color: #019267;
+}
+
+.input {
+    padding: 10px 0;
+    margin-bottom: 7px;
+    color: #fff;
+}
+
+.input label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.input input {
+    /* outline: none; */
+    /* border: none; */
+    border: 1 px solid #019267;
+    width: 190px;
+    height: 30px;
+    border-radius: 12px;
+}
+
+#button {
+    --color: #00A97F;
+    /* padding: 0 1.2em; */
+    background-color: transparent;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 400;
+    font-size: 17px;
+    border: 1px solid;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: var(--color);
+    z-index: 1;
+    width: 130px;
+    height: 37px;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+/* button animation */
+
+#button::before,
+.button::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1s ease;
+}
+
+#button::before {
+    top: -1em;
+    left: -1em;
+}
+
+#button::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+}
+
+#button:hover::before,
+.button:hover::after {
+    height: 410px;
+    width: 410px;
+}
+
+#button:hover {
+    color: rgb(10, 25, 30);
+}
+
+#button:active {
+    filter: brightness(.8);
 }
